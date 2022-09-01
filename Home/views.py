@@ -2,6 +2,7 @@ from django.shortcuts import render
 from Home.models import Publicacion
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.http import HttpResponseRedirect
 # Create your views here.
 
 
@@ -26,9 +27,9 @@ class Delete_Publication(DeleteView):
     model = Publicacion
     template_name = 'home/delete_publication.html'
 
-    success_url = 'http://juanbaquiroga.pythonanywhere.com/home'
-    # def get_success_url(self):
-    #     return reverse('Home')
+    def get_success_url(self):
+        return HttpResponseRedirect(reverse('Home'))
+        
 
 class Update_Publication(UpdateView):
     model = Publicacion
