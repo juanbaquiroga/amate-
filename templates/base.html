@@ -21,13 +21,13 @@
     <header>
         <div class="container">
         <div class="logo-box">
-            <a href="/home/">
+            <a href="/">
             <img class='logo' src="{% static 'img/logos/logo06.png'%}">
             </a>
         </div>
         <nav>
         <ul>
-            <li><a href="/home/">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li><a href="/products/">Productos</a></li>
             <li><a href="/home/about-us/">about us</a></li>
             {% if request.user.is_authenticated and request.user.is_superuser %}
