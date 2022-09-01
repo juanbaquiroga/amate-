@@ -26,8 +26,9 @@ class Delete_Publication(DeleteView):
     model = Publicacion
     template_name = 'home/delete_publication.html'
 
-    def get_success_url(self):
-        return reverse('Home')
+    success_url = 'http://juanbaquiroga.pythonanywhere.com/home'
+    # def get_success_url(self):
+    #     return reverse('Home')
 
 class Update_Publication(UpdateView):
     model = Publicacion
